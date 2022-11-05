@@ -1,0 +1,50 @@
+<!--include Header-->
+<%- include('include/_header')%>
+<!--Main Site-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav">
+            <a href="/add-user" class="border-shadow">
+                <span>New User</span>
+            </a>
+        </div>
+        <!--form handling-->
+        <form action="/" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nom</th>
+                        <th>email</th>
+                        <th>adresse</th>
+                        <th>numero</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i<users.length; i++){%>
+                    <tr>
+                        <td><%= i+1 %></td>
+                        <td><%= users[i].name %></td>
+                        <td><%= users[i].email %></td>
+                        <td><%= users[i].adresse %></td>
+                        <td><%= users[i].numero %></td>
+                        <td>
+                            <a href="/update-user?id=<%= users[i]._id %>" class="btn border-shadow update">
+                                <span class="text-gradient">Update</span>
+                            </a>
+                            <a href="#" class="btn border-shadow delete">
+                                <span class="text-gradient">delete</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </form>
+        <!--form handling-->
+    </div>
+</main>
+<!--Main Site-->
+<!--include footer-->
+<%- include('include/_footer')%>

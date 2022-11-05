@@ -1,0 +1,48 @@
+<!--include Header-->
+<%- include('include/_header')%>
+
+<!--Main Site-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav">
+            <a href="/" class="border-shadow">
+                <span>All Users</span>
+            </a>
+        </div>
+        <div class="container">
+            <h2>Update User</h2>
+            <span>Use the Below form to update an account</span>
+        </div>
+        <!--form-->
+        <!--form handling-->
+<form method="post" id="update_user">
+    <div class="new_user">
+     <div class="form-group">
+         <label for="name">Nom</label>
+         <input type="hidden" name="id" value="<%= user._id %>">
+         <input type="text" name="name" value="<%= user.name %>" placeholder="Nom">
+     </div>
+     <div class="form-group">
+         <label for="name">Email</label>
+         <input type="text" name="Email" value="<%= user.email %>" placeholder="example@example.com">
+     </div>
+     <div class="form-group">
+         <label for="name">Adresse</label>
+         <input type="text" name="adresse" value="<%= user.adresse %>" placeholder="16554">
+     </div>
+     <div class="form-group">
+         <label for="name">Numero</label>
+         <input type="tel" name="numero" value="<%= user.numero %>" placeholder="06xx">
+     </div>
+     <div class="form-group">
+         <button>Save</button>
+     </div>
+    </div>
+ </form>
+ <!--form handling-->
+    </div>
+</main>
+<!--Main Site-->
+
+<!--include footer-->
+<%- include('include/_footer')%>

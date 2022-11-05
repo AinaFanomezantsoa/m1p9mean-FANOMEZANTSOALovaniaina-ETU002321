@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD APPLICATION</title>
+</head>
+<body>
+    
+    <!--header-->
+        <header>
+            <div>
+                <div>
+                    <a href="http://">User Management System</a>
+                </div>
+            </div>
+        </header>
+    <!--Header-->
+
+    <!--Main Site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav">
+                <a href="/add-user" class="border-shadow">
+                    <span>All Users</span>
+                </a>
+            </div>
+            <div class="container">
+                <h2>New User</h2>
+                <span>Use the Below form to create a new account</span>
+            </div>
+            <!--form handling-->
+            <form action="/" method="post">
+               <div class="new-user">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" name="name" value="" placeholder="Nom">
+                </div>
+                <div class="form-group">
+                    <label for="name">Email</label>
+                    <input type="text" name="Email" value="" placeholder="example@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="name">Adresse</label>
+                    <input type="text" name="adresse" value="" placeholder="16554">
+                </div>
+                <div class="form-group">
+                    <label for="name">Numero</label>
+                    <input type="tel" name="numero" value="" placeholder="06xx">
+                </div>
+                <div class="form-group">
+                    <button>Save</button>
+                </div>
+               </div>
+            </form>
+            <!--form handling-->
+        </div>
+    </main>
+    <!--Main Site-->
+</body>
+</html>
