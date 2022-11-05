@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body" *ngFor="let resto of restos">
+        <h5 class="card-title">{{resto.nomResto}}</h5>
+        <p class="card-text">{{resto.adResto}}</p>
+        <p class="card-text">{{resto.numResto}}</p>
+        <a href="#" class="btn btn-primary">Voir</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body" *ngFor="let menu of menus">
+        <h5 class="card-title">{{menu.nomPlat}}</h5>
+        <p class="card-text">{{menu.ingredient}}</p>
+        <p class="card-text">{{menu.prixPlat}}</p>
+        <a href="#" class="btn btn-primary">Ajouter au panier </a>
+      </div>
+    </div>
+  </div>
+</div>
+
